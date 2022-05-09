@@ -2,6 +2,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 data class Truck(
+    val truck_id: String,
     val longitude: Double,
     val latitude: Double,
     val speed_kmh: Double,

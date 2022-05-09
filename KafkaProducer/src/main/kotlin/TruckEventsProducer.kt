@@ -19,7 +19,7 @@ class TruckEventsProducer {
                 val truck = klaxon.parse<Truck>(event)
                 val dataJSON = klaxon.toJsonString(truck)
 
-                kafkaProducer.send(ProducerRecord("truck-topic", "truck_1", dataJSON))
+                kafkaProducer.send(ProducerRecord("truck-topic", truck!!.truck_id, dataJSON))
                 logger.info("Event produced with value: $dataJSON")
                 Thread.sleep(2000)
             }

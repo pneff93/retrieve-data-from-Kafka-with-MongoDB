@@ -1,6 +1,6 @@
 install.packages("mongolite")
 library(mongolite)
-connection <- mongo(collection = "truck_1",
+connection <- mongo(collection = "trucks",
                     db = "TruckData",
                     url = "mongodb://user:password@mongo:27017")
 

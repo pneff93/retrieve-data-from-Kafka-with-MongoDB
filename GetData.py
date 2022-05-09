@@ -3,7 +3,7 @@ import pandas as pd
 
 client = MongoClient("mongodb://user:password@mongo:27017")
 db = client["TruckData"]
-col = db["truck_1"]
+col = db["trucks"]
 
 data = pd.DataFrame(col.find())
 pipeline = [
